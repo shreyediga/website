@@ -1,0 +1,118 @@
+
+<!-- About -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>About · Shreyansh Ediga Lakhamsani</title>
+    <meta name="Description" content="Shreyansh is a dude.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/hover-min.css">
+
+    <!-- Javascript -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.back').removeClass('no-display');
+          } else {
+              $('.back').addClass('no-display');
+          }
+        });
+        
+        /* Forward button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.forward').removeClass('no-display');
+          } else {
+              $('.forward').addClass('no-display');
+          }
+        });
+        
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.scroll-to-top').removeClass('no-display');
+          } else {
+              $('.scroll-to-top').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+</head>
+
+<body class="grid">
+    <!-- Header -->
+    <header class="c12">
+        <!-- Nav -->
+        <div class="hero">
+            <div class="header">
+                <a href="/"><img alt="Shreyan logo" src="shreyan-logo.svg" class="zk-logo"></a>
+                <h3 class="medium content-web">Shreyansh Ediga Lakhamsani</h3>
+                <nav class="nav">
+                    <h5 class="option selected">About</h5>
+                    <h5 class="option"><a href="zainkho-resume.pdf" aria-label="Zain Khoja reseume" target="_blank" rel="noopener">Resume</a></h5>
+                </nav>
+            </div>
+
+            <!-- Title -->
+            <div class="title">
+                <h1 class="content-web emoji">👋🏽</h1>
+                <div>
+                    <h1 class="content-mobile">👋🏽</h1>
+                    <h1>Hi!</h1>
+                    <h1 class="medium">It's nice to meet you.</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="c12 summary main">
+        <div>
+            <p>
+                I’m currently a student at Folsom High School in California. I am 15 years old and graduating in 2024. I am a member of the Science club, California Scholarship Federation, and CS club</a>.
+            </p><br>
+            <p>
+                I am currently a beginner in CS and learning Java, Python, Data Structures, and Algorithms on the side. In my free time, I play a lot of video games like Valorant and Minecraft and I have also recently picked up rock climbing</a>. 
+            </p><br>
+            
+        </div>
+        <img alt="picture of Shreyan" src="shreyan.JPG" class="avi">
+    </main>
+    
+    <footer class="c12 grid">
+        <div class="c6-left">
+            <p>
+                If you ever want to talk or hang out, you can email me at <a href="mailto:shrey.ediga@gmail.com?subject=Hey!" target="_blank" rel="noopener">shrey.ediga@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Scroll To Top -->
+        <a href="#top" aria-label="scroll to top" class="content-web no-display scroll-to-top"></a>
+    </footer>
+</body>
+
+</html>
